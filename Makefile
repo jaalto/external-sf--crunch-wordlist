@@ -70,15 +70,19 @@ clean:
 # Install generic target
 geninstall: build
 	@echo "Creating directories..."
-	$(INSTALL) -d -m 755 $(INSTALL_OPTIONS) $(BINDIR) $(MANDIR) $(SHAREDIR) $(LIBDIR)
+	$(INSTALL) -d -m 755 $(INSTALL_OPTIONS) \
+		$(DESTDIR)$(BINDIR) \
+		$(DESTDIR)$(MANDIR) \
+		$(DESTDIR)$(SHAREDIR) \
+		$(DESTDIR)$(LIBDIR)
 	@echo "Copying binary..."
-	$(INSTALL) crunch -m 755 $(INSTALL_OPTIONS) $(LIBDIR)
+	$(INSTALL) crunch -m 755 $(INSTALL_OPTIONS) $(DESTDIR)$(LIBDIR)
 	@echo "Copying charset.lst..."
-	$(INSTALL) charset.lst -m 644 $(INSTALL_OPTIONS) $(BINDIR)
+	$(INSTALL) charset.lst -m 644 $(INSTALL_OPTIONS) $(DESTDIR)$(BINDIR)
 	@echo "Copying GPL.TXT..."
-	$(INSTALL) GPL.TXT -m 644 $(INSTALL_OPTIONS) $(SHAREDIR)
+	$(INSTALL) GPL.TXT -m 644 $(INSTALL_OPTIONS) $(DESTDIR)$(SHAREDIR)
 	@echo "Installing man page..."
-	$(INSTALL) crunch.1 -m 644 $(INSTALL_OPTIONS) $(MANDIR)
+	$(INSTALL) crunch.1 -m 644 $(INSTALL_OPTIONS) $(DESTDIR)$(MANDIR)
 	@echo ""
 
 # Install BT specific target
