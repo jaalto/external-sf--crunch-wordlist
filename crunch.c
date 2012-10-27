@@ -1758,7 +1758,7 @@ wchar_t *block2;      /* block is word being created */
 
             renamefile(((wordlength*2)+5), fpath, outputfilename, compressalgo);
             if ((fptr = fopen(fpath, "w")) == NULL) {
-              fprintf(stderr,"permute2: Ouput file START could not be opened\n");
+              fprintf(stderr,"permute2: Output file START could not be opened\n");
               exit(EXIT_FAILURE);
             }
             my_thread.linecounter = 0;
