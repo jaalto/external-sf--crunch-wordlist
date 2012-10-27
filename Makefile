@@ -30,10 +30,11 @@ PREFIX	    = /usr
 DISTDIR	    = $(PACKAGE)-$(VERSION)
 DISTFILES   = crunch.c crunch.1 charset.lst
 BINDIR	    = $(PREFIX)/bin
-LIBDIR	    = $(PREFIX)/usr/lib/$(PACKAGE)
-SHAREDIR    = $(PREFIX)/usr/share/$(PACKAGE)
-BTBINDIR    = /pentest/passwords/$(PACKAGE)
+LIBDIR	    = $(PREFIX)/lib/$(PACKAGE)
+SHAREDIR    = $(PREFIX)/share/$(PACKAGE)
+DOCDIR	    = $(PREFIX)/share/doc/$(PACKAGE)
 MANDIR	    = $(PREFIX)/share/man/man1
+BTBINDIR    = /pentest/passwords/$(PACKAGE)
 INSTALL	    = $(shell which install)
 CC	    = $(shell which gcc)
 LIBFLAGS    = -lm
@@ -52,13 +53,13 @@ build: crunch
 
 val:	crunch.c
 	@echo "Building valgrind compatible binary..."
-	$(CC) $(VCFLAGS) $(LFS) $? $(LIBFLAGS) -o $(PACKAGE)
+	$(CC) $(CPPFLAGS) $(VCFLAGS) $(LFS) $? $(LIBFLAGS) $(LDFLAGS) -o $(PACKAGE)
 	@echo "valgrind --leak-check=yes crunch ..."
 	@echo ""
 
 crunch: crunch.c
 	@echo "Building binary..."
-	$(CC) $(CFLAGS) $(LFS) $? $(LIBFLAGS) -o $@
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(LFS) $? $(LIBFLAGS) $(LDFLAGS) -o $@
 	@echo ""
 
 # Clean target
@@ -74,13 +75,13 @@ geninstall: build
 		$(DESTDIR)$(BINDIR) \
 		$(DESTDIR)$(MANDIR) \
 		$(DESTDIR)$(SHAREDIR) \
-		$(DESTDIR)$(LIBDIR)
+		$(DESTDIR)$(DOCDIR)
 	@echo "Copying binary..."
-	$(INSTALL) crunch -m 755 $(INSTALL_OPTIONS) $(DESTDIR)$(LIBDIR)
+	$(INSTALL) crunch -m 755 $(INSTALL_OPTIONS) $(DESTDIR)$(BINDIR)
 	@echo "Copying charset.lst..."
-	$(INSTALL) charset.lst -m 644 $(INSTALL_OPTIONS) $(DESTDIR)$(BINDIR)
+	$(INSTALL) charset.lst -m 644 $(INSTALL_OPTIONS) $(DESTDIR)$(SHAREDIR)
 	@echo "Copying GPL.TXT..."
-	$(INSTALL) GPL.TXT -m 644 $(INSTALL_OPTIONS) $(DESTDIR)$(SHAREDIR)
+	$(INSTALL) GPL.TXT -m 644 $(INSTALL_OPTIONS) $(DESTDIR)$(DOCDIR)
 	@echo "Installing man page..."
 	$(INSTALL) crunch.1 -m 644 $(INSTALL_OPTIONS) $(DESTDIR)$(MANDIR)
 	@echo ""
