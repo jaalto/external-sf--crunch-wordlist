@@ -41,8 +41,8 @@ LIBFLAGS    = -lm
 THREADFLAGS = -pthread
 OPTFLAGS    = -g -o0
 LINTFLAGS   = -Wall -pedantic
-CFLAGS	    = $(THREADFLAGS) $(LINTFLAGS) -std=c99
-VCFLAGS	    = $(THREADFLAGS) $(LINTFLAGS) -std=c99 $(OPTFLAGS)
+CFLAGS_STD  = $(THREADFLAGS) $(LINTFLAGS) -std=c99
+VCFLAGS	    = $(CFLAGS_STD) $(OPTFLAGS)
 LFS	    = $(shell getconf POSIX_V6_ILP32_OFFBIG_CFLAGS)
 INSTALL_OPTIONS = -o root -g root
 
@@ -53,13 +53,13 @@ build: crunch
 
 val:	crunch.c
 	@echo "Building valgrind compatible binary..."
-	$(CC) $(CPPFLAGS) $(VCFLAGS) $(LFS) $? $(LIBFLAGS) $(LDFLAGS) -o $(PACKAGE)
+	$(CC) $(CPPFLAGS) $(VCFLAGS) $(CFLAGS) $(LFS) $? $(LIBFLAGS) $(LDFLAGS) -o $(PACKAGE)
 	@echo "valgrind --leak-check=yes crunch ..."
 	@echo ""
 
 crunch: crunch.c
 	@echo "Building binary..."
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(LFS) $? $(LIBFLAGS) $(LDFLAGS) -o $@
+	$(CC) $(CPPFLAGS) $(CFLAGS_STD) $(CFLAGS) $(LFS) $? $(LIBFLAGS) $(LDFLAGS) -o $@
 	@echo ""
 
 # Clean target
