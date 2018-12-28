@@ -79,3 +79,42 @@ mixalpha-numeric-symbol14-sv  = [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNO
 mixalpha-numeric-symbol14-space-sv = [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+= ]
 mixalpha-numeric-all-sv       = [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
 mixalpha-numeric-all-space-sv = [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+
+#########################################################################################
+#                             CZECH CHAR-SUPPORT                                       # #########################################################################################
+
+#########################
+# Uppercase             #
+#########################
+ualpha-cs                        = [ABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ]
+ualpha-space-cs                  = [ABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ ]
+ualpha-numeric-cs                = [ABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789]
+ualpha-numeric-space-cs          = [ABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789 ]
+ualpha-numeric-symbol14-cs       = [ABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789!@#$%^&*()-_+=]
+ualpha-numeric-symbol14-space-cs = [ABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789!@#$%^&*()-_+= ]
+ualpha-numeric-all-cs            = [ABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
+ualpha-numeric-all-space-cs      = [ABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+
+#########################
+# Lowercase             #
+#########################
+lalpha-cs                        = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýž]
+lalpha-space-cs                  = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýž ]
+lalpha-numeric-cs                = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýž0123456789]
+lalpha-numeric-space-cs          = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýž0123456789 ]
+lalpha-numeric-symbol14-cs       = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýž0123456789!@#$%^&*()-_+=]
+lalpha-numeric-symbol14-space-cs = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýž0123456789!@#$%^&*()-_+= ]
+lalpha-numeric-all-cs            = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýž0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
+lalpha-numeric-all-space-cs      = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýž0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+
+#########################
+# Mixcase               #
+#########################
+mixalpha-cs                   = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýžABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ]
+mixalpha-space-cs             = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýžABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ ]
+mixalpha-numeric-cs           = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýžABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789]
+mixalpha-numeric-space-cs     = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýžABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789 ]
+mixalpha-numeric-symbol14-cs  = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýžABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789!@#$%^&*()-_+=]
+mixalpha-numeric-symbol14-space-cs = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýžABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789!@#$%^&*()-_+= ]
+mixalpha-numeric-all-cs       = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýžABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
+mixalpha-numeric-all-space-cs = [abcdefghijklmnopqrstuvwxyzáčďéěíňňóřšťúůýžABCDEFGHIJKLMNOPQRSTUVWXYZÁČĎÉĚÍŇŇÓŘŠŤÚŮÝŽ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
